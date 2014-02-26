@@ -3,6 +3,8 @@ FancyHands PHP Wrapper
 
 PHP Wrapper for the [FancyHands personal assistant API]. You can sign up for API access [here].
 
+This wrapper is also available as a native CodeIgniter library at [dealerteam-charles/FancyHandsPHP-CodeIgniter].
+
 Requirements
 ------------
 The only requirement for this wrapper is the PECL OAuth extension. It's pretty easy to install on Ubuntu/Debian using the below commands:
@@ -30,3 +32,4 @@ MIT
 
 [FancyHands personal assistant API]: https://www.fancyhands.com/developer
 [here]: https://www.fancyhands.com/api/explorer
+[dealerteam-charles/FancyHandsPHP-CodeIgniter]: https://github.com/dealerteam-charles/FancyHandsPHP-CodeIgniter
