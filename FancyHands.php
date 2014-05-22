@@ -5,10 +5,10 @@
 		public static $OAuth;
 		public static $testMode;
 		
-		// By passing the third option as true, it will prevent task creations from being handled by a FanyHands agent.
-		public function __construct($apiKey,$apiSecret,$test = false) {
+		// By passing the third option as true, it will prevent task creations from being handled by a FancyHands agent.
+		public function __construct($apiKey, $apiSecret, $test = false) {
 				
-			self::$OAuth = new OAuth($apiKey,$apiSecret,OAUTH_SIG_METHOD_HMACSHA1,OAUTH_AUTH_TYPE_AUTHORIZATION);
+			self::$OAuth = new OAuth($apiKey, $apiSecret, OAUTH_SIG_METHOD_HMACSHA1, OAUTH_AUTH_TYPE_AUTHORIZATION);
 			self::$testMode = $test;
 			
 		}
@@ -23,14 +23,14 @@
 		 */
 		public function cancel($key) {
 		
-			try{
+			try {
 			
-				self::$OAuth->fetch("https://www.fancyhands.com/api/v1/request/custom/cancel",array('key' => $key),OAUTH_HTTP_METHOD_POST);
+				self::$OAuth->fetch('https://www.fancyhands.com/api/v1/request/custom/cancel', array('key' => $key), OAUTH_HTTP_METHOD_POST);
 				return array('success' => true, 'message' => '');
 				
-			} catch(OAuthException $E) {
+			} catch (OAuthException $E) {
 			
-				return array('success' => false, 'messsage' => $E->lastResponse);
+				return array('success' => false, 'message' => $E->lastResponse);
 				
 			}
 			
@@ -45,7 +45,7 @@
 		 * @param	string	$description	Description of the task.
 		 * @param	float	$bid			Amount you would like to pay for the task.
 		 * @param	array	$customFields	Multidimensional array of custom fields for the assistant to fill out. (see example) (optional)
-		 * @param	date	$expirationDate	Expiration date ormatted as "2014-02-26T10:09:08Z" - Must be within 7 days.
+		 * @param	date	$expirationDate	Expiration date formatted as "2014-02-26T10:09:08Z" - Must be within 7 days.
 		 * @return 	array					"success" boolean, "message", task "key", and "created" date.
 		 */
 		public function create($title, $description, $bid, $customFields, $expirationDate) {
@@ -62,7 +62,7 @@
 			
 			try {
 
-				self::$OAuth->fetch("https://www.fancyhands.com/api/v1/request/custom/",$postFields,OAUTH_HTTP_METHOD_POST);
+				self::$OAuth->fetch('https://www.fancyhands.com/api/v1/request/custom/', $postFields, OAUTH_HTTP_METHOD_POST);
 				$response = json_decode(self::$OAuth->getLastResponse());
 				return array('success' => true, 'message' => '', 'key' => $response->key, 'created' => $response->date_created);
 				
@@ -94,7 +94,7 @@
 			
 			try {
 
-				self::$OAuth->fetch("https://www.fancyhands.com/api/v1/request/custom/",$getFields,OAUTH_HTTP_METHOD_GET);
+				self::$OAuth->fetch('https://www.fancyhands.com/api/v1/request/custom/', $getFields, OAUTH_HTTP_METHOD_GET);
 				$response = json_decode(self::$OAuth->getLastResponse());
 				
 				return array('success' => true, 'message' => '', 'response' => $response);
