@@ -1,18 +1,28 @@
 FancyHands PHP Wrapper
 ======================
 
-PHP Wrapper for the [FancyHands personal assistant API]. You can sign up for API access [here].
+PHP Wrapper for the [FancyHands API](https://www.fancyhands.com/developer). 
 
-This wrapper is also available as a native CodeIgniter library at [dealerteam-charles/FancyHandsPHP-CodeIgniter].
+This wrapper is also available as a native [CodeIgniter library](https://github.com/dealerteam-charles/FancyHandsPHP-CodeIgniter).
+
+This wrapper was originally written by [Charles Zink](https://twitter.com/charleszink) ([Github](https://github.com/dealerteam-charles)). It has been updated for the new API calls by Ted Roden.
 
 Requirements
 ------------
-The only requirement for this wrapper is the PECL OAuth extension. It's pretty easy to install on Ubuntu/Debian using the below commands:
 
-```sh
-sudo apt-get install pecl
+The only requirement is the pecl OAuth extension
+
+### Installing pecl/oauth on Ubuntu/Debian:
+
+```sudo apt-get install pecl
 sudo pecl install oauth
 ```
+
+### Installing pecl/oauth a Mac
+
+[Install pecl](http://jason.pureconcepts.net/2012/10/install-pear-pecl-mac-os-x/)
+
+```sudo pecl install oauth```
 
 Usage
 -----
@@ -27,9 +37,6 @@ You can contact FancyHands developer support at api@fancyhands.com. For help usi
 License
 -------
 
-MIT
+[MIT](https://github.com/fancyhands/fancyhands-php/blob/master/LICENSE.txt)
 
 
-[FancyHands personal assistant API]: https://www.fancyhands.com/developer
-[here]: https://www.fancyhands.com/api/explorer
-[dealerteam-charles/FancyHandsPHP-CodeIgniter]: https://github.com/dealerteam-charles/FancyHandsPHP-CodeIgniter
