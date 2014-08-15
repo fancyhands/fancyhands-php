@@ -3,8 +3,6 @@ FancyHands PHP Wrapper
 
 PHP Wrapper for the [FancyHands API](https://www.fancyhands.com/developer). 
 
-This wrapper is also available as a native [CodeIgniter library](https://github.com/dealerteam-charles/FancyHandsPHP-CodeIgniter).
-
 This wrapper was originally written by [Charles Zink](https://twitter.com/charleszink) ([Github](https://github.com/dealerteam-charles)). It has been updated for the new API calls by Ted Roden.
 
 Requirements
@@ -14,20 +12,26 @@ The only requirement is the pecl OAuth extension
 
 ### Installing pecl/oauth on Ubuntu/Debian:
 
-```sudo apt-get install pecl
-sudo pecl install oauth
-```
+    sudo apt-get install pecl
+    sudo pecl install oauth
+
 
 ### Installing pecl/oauth a Mac
 
 [Install pecl](http://jason.pureconcepts.net/2012/10/install-pear-pecl-mac-os-x/)
 
-```sudo pecl install oauth```
+    sudo pecl install oauth
+
 
 Usage
 -----
 
 Please see Example.php for use cases.
+
+Other Versions
+--------------
+
+ - A native [CodeIgniter library](https://github.com/dealerteam-charles/FancyHandsPHP-CodeIgniter).
 
 Support
 -------
