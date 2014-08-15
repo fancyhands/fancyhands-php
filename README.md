@@ -93,7 +93,7 @@ $expire = strtotime("+1 day");
 $request = $FancyHands->custom_create("PHP Custom Test", "PHP Custom Test...", 1, $customFields, $expire);
 ```
 
-Other Versions
+Other PHP Versions
 --------------
 
  - A native [CodeIgniter library](https://github.com/dealerteam-charles/FancyHandsPHP-CodeIgniter).
