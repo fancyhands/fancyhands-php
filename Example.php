@@ -4,10 +4,8 @@ date_default_timezone_set("America/New_York"); // just in case... you definitely
 include_once('FancyHands.php');
 
 // API Keys
-/* $apiKey 	= 'DWrk9ZvzXSDx2eH'; */
-/* $apiSecret 	= 'BXyjd6RYc5Ryi35'; */
-$apiKey 	= 'PuREN1kznQ4UyWI';
-$apiSecret 	= 'dzvNP3hg0idkb0x';
+$apiKey 	= '';
+$apiSecret 	= '';
 	
 // Development mode? (won't send task to FancyHands assistants)
 $dev		= true;
