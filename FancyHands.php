@@ -2,8 +2,7 @@
 
 	class FancyHands {
 
-//        const API_HOST = "https://www.fancyhands.com";
-        const API_HOST = "http://localhost:8080";        
+        const API_HOST = "https://www.fancyhands.com";        
         const STATUS_NEW = 1;
         const STATUS_OPEN = 5;
         const STATUS_CLOSED = 20;
