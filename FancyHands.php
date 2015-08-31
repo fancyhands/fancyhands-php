@@ -355,7 +355,49 @@
             return self::_get('/api/v1/request/' . $type . '/', $getFields);
         }
 
+		
+		public function realtime_request_create($title) { 
+		  $url = '/api/v1/realtime/request/';
+		  $query_params = array('title' => $title);
+		  return self::_post($url, $query_params);
+		}
+			
+		public function realtime_request_get($key=false, $cursor=false) {
+		  $url = '/api/v1/realtime/request/';
+		  $query_params = array();
+		  if($key) 
+			$query_params['key'] = $key;
+		  if($cursor) 
+			$query_params['cursor'] = $cursor;
+		  return self::_get($url, $query_params);
+		}
 
+		public function realtime_message_create($request_key, $content) {
+		  $url = '/api/v1/realtime/message/';
+			$query_params = array(
+								  'request_key' => $request_key,
+								  'content' => $content,
+								  );
+			return self::_post($url, $query_params);
+		}
+		  
+		public function realtime_message_get($request_key=false, $cursor=false) {
+		  $url = '/api/v1/realtime/message/';
+		  $query_params = array();
+		  if($request_key) 
+            $query_params['request_key'] = $request_key;
+		  if($cursor)
+			$query_params['cursor'] = $cursor;
+		  return self::_get($url, $query_params);
+		}
+		
+		public function realtime_request_close($key) {
+		  $url = '/api/v1/realtime/close/';
+		  $query_params = array( 'key' => $key );
+		  return self::_post($url, $query_params);
+		}
+		
+		
         
         /** ******************* */
         // Just stuff used by this class
